@@ -13,7 +13,7 @@ export default function UserMenu({ user, onLogout }) {
       >
         <img
           src={user.avatar}
-          alt={user.name}
+          alt={user.fullName}
           className="w-10 h-10 rounded-full object-cover border-2 border-slate-200"
         />
       </button>
@@ -29,7 +29,7 @@ export default function UserMenu({ user, onLogout }) {
 
             <div>
               <p className="font-medium text-slate-700">
-                {user.name}
+                {user.fullName}
               </p>
 
               <span

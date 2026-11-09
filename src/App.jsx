@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import SideBar from "./components/layout/SideBar";
 import TopBar from "./components/layout/TopBar";
@@ -5,11 +6,30 @@ import MainContent from "./components/MainContent";
 import LoginScreen from "./components/LoginScreen";
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [auth, setAuth] = useState(() => {
+    const savedAuth = localStorage.getItem("schoolHubAuth");
 
+    return savedAuth ? JSON.parse(savedAuth) : null;
+  });
 
-  if (!user) {
-    return <LoginScreen onLogin={setUser} />;
+  function handleLogin(data) {
+    const authData = {
+      token: data.token,
+      user: data.user,
+    };
+
+    localStorage.setItem("schoolHubAuth", JSON.stringify(authData));
+
+    setAuth(authData);
+  }
+
+  function handleLogout() {
+    localStorage.removeItem("schoolHubAuth");
+    setAuth(null);
+  }
+
+  if (!auth) {
+    return <LoginScreen onLogin={handleLogin} />;
   }
 
   return (
@@ -17,7 +37,10 @@ const App = () => {
       <SideBar />
 
       <div className="flex-1 flex flex-col">
-        <TopBar user={user} onLogout={() => setUser(null)} />
+        <TopBar
+          user={auth.user}
+          onLogout={handleLogout}
+        />
 
         <MainContent />
       </div>
