@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Mrs. Adaeze Okafor",
+      "email": "admin@schoolhub.test",
+      "password": "admin123",
+      "role": "admin",
+      "avatar": "https://res.cloudinary.com/db8mcyukl/image/upload/v1755295348/arcana/profile_pictures/bfa73qbq5efxttduqz41.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Mr. Tunde Bello",
+      "email": "teacher@schoolhub.test",
+      "password": "teacher123",
+      "role": "teacher",
+      "avatar": "https://res.cloudinary.com/db8mcyukl/image/upload/v1782897101/Passport_Photograph_w5ezww.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Amina Yusuf",
+      "email": "amina@schoolhub.test",
+      "password": "student123",
+      "role": "student",
+      "avatar": "https://res.cloudinary.com/db8mcyukl/image/upload/v1757170438/arcana/profile_pictures/ernmnr5yr42bdhsyycwo.webp",
+      "studentId": "101"
+    },
+    {
+      "name": "Nwagu David-Isaac Okenwa",
+      "email": "nwagudavidisaac@gmail.com",
+      "password": "teacher123 ",
+      "role": "teacher",
+      "avatar": "https://res.cloudinary.com/db8mcyukl/image/upload/v1782897101/Passport_Photograph_w5ezww.jpg",
+      "id": "1MJbrMNqC7g"
+    },
+    {
+      "name": "Nwagu David-Isaac Okenwa",
+      "email": "okenwa.nwagu@mcis.sch.ng",
+      "password": "teacher123 ",
+      "role": "student",
+      "avatar": "🧑🏾‍🎓",
+      "id": "AaNBAUGkR2s"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
